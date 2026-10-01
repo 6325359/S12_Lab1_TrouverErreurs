@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Mission.Data;
 using Mission.ViewModels;
 using Mission.Models;
+using NuGet.ProjectModel;
 
 namespace Mission.Controllers
 {
@@ -24,7 +25,9 @@ namespace Mission.Controllers
         public async Task<IActionResult> Index()
         {
             // COMPLÉTER ICI
-            return View();
+            var missionDbContext = _context.Produits.Include(p => p.Categorie);
+            return View(await missionDbContext.ToListAsync());
+            
         }
 
     }

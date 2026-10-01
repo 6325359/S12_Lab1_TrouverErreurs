@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Upsert" class="btn btn-success">Create New</a>
+    <a asp-action="Upsert" class="btn btn-success">Upsert</a>
 </p>
 <table class="table table-light table-bordered table-striped">
     <thead class="table-primary">
@@ -25,7 +25,7 @@
                 @Html.DisplayFor(modelItem => item.Titre)
             </td>
             <td>
-                    <a class="btn btn-warning" asp-action="Upsert" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-warning" asp-action="Upsert" asp-route-id="@item.Id">Upsert</a>
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
